@@ -12,9 +12,9 @@ Istruzioni:
 4. Stampa il risultato.
 
 Esempio di input:
-./esercizio1 testo.txt
+./esercizio1 file.txt
 
 Esempio di output:
-Numero di vocali: 42
+Numero di vocali: 976
 */
 
