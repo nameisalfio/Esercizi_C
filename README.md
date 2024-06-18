@@ -25,7 +25,7 @@ La repository è organizzata come segue:
 **Clona la Repository:**
 
 ```bash
-git clone https://github.com/nameisalfio/Esercizi_C.git
+git clone git@github.com:nameisalfio/Esercizi_C.git
 ```
 
 **Apri l'editor sulla directory corretta:**
