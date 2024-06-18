@@ -18,3 +18,36 @@ Esempio di output:
 Numero di vocali: 976
 */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int main(int argc, char *argv[]){
+
+    //faccio il controllo di errore sul numero di argomenti
+    if (argc != 2){
+        printf("Error: %s", argv[0]);
+    }
+
+    //tento di aprire il file in modalità read
+    FILE * file = fopen(argv[1], "r");
+    if (file == NULL){
+        perror("Errore nell'apertura del file");
+    }
+
+    int count = 0;
+    int c; // memorizza il carattere letto dal file di testo
+    while ((c =fgetc(file)) != EOF){ //fget legge il carattere successivo puntato da file che è il puntatore a file fino alla fine del fine (EOF)
+        c = tolower(c); //se il carattere è maiuscolo tolower lo converte in minuscolo (libreria ctype.h)
+        if (c =='a' || c == 'e' || c == 'i' || c == 'o' || c== 'u') {
+            count++;
+        }
+    }
+
+    fclose(file); //chiudo il file dopo che l'ha letto tutto
+    printf ("Il numero di vocali é:  %d\n", count);
+
+
+}
+
+
